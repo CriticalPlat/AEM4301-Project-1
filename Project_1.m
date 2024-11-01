@@ -1,19 +1,14 @@
-<<<<<<< HEAD
 %% Project Main
 clear;
 clc;
-% Problem 1 Long Way
-=======
->>>>>>> 3b0ded00506a7ea0a619f3539ca95c47bd27488e
 mu = 1;
 R0 = [0.5 0.6 0.7];
 R1 = [0 1 0];
 dt = 0.9667663;
-<<<<<<< HEAD
 z0 = 0;
 dir = 0;
-Lamberts(mu, R0, R1, dt, z0, dir);
-disp('Problem 1 Long Way ')
+[V1,V2] = Lamberts(mu, R0, R1, dt, z0, dir);
+
 disp('V1:'), disp(V1)
 disp('V2:'), disp(V2)
 
@@ -65,16 +60,12 @@ function [V1,V2] = Lamberts(mu, R0, R1, dt, z0, dir)
         end
     
         %use value of z obtained to determine v1,v2
+        
             f = 1 - (chi^2)*C / r0;
             g = dt - (chi^3)*S / sqrt(mu); % = fp
-            f_prime = ((sqrt(mu))/(r1*r0))*chi*(z*S-1);
+            f_prime = g;
             g_prime = (1 + g*f_prime) / f;
             V1 = (R1 - f*R0) / g;
             V2 = f_prime*R0 + g_prime*V1;
         
 end
-=======
-z0 = 4;
-dir = 0;
-[V1,V2] = Lamberts(1, R0, R1, dt, 4, 0);clc
->>>>>>> 3b0ded00506a7ea0a619f3539ca95c47bd27488e
