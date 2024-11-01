@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 %% Project Main
 clear;
 clc;
 % Problem 1 Long Way
+=======
+>>>>>>> 3b0ded00506a7ea0a619f3539ca95c47bd27488e
 mu = 1;
 R0 = [0.5 0.6 0.7];
 R1 = [0 1 0];
 dt = 0.9667663;
+<<<<<<< HEAD
 z0 = 0;
 dir = 0;
 Lamberts(mu, R0, R1, dt, z0, dir);
@@ -69,3 +73,8 @@ function [V1,V2] = Lamberts(mu, R0, R1, dt, z0, dir)
             V2 = f_prime*R0 + g_prime*V1;
         
 end
+=======
+z0 = 4;
+dir = 0;
+[V1,V2] = Lamberts(1, R0, R1, dt, 4, 0);clc
+>>>>>>> 3b0ded00506a7ea0a619f3539ca95c47bd27488e
